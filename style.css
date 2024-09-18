@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid blueviolet; */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAV STYLE */
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  min-height: 8vh;
+  gap: 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #d73533;
+  padding: 1rem 0;
+  box-shadow: 0px 126px 96px -69px rgba(0, 0, 0, 0.31) inset;
+  -webkit-box-shadow: 0px 126px 96px -69px rgba(0, 0, 0, 0.31) inset;
+  -moz-box-shadow: 0px 126px 96px -69px rgba(0, 0, 0, 0.31) inset;
+}
+
+.nav-logo {
+  display: flex;
+}
+
+.nav-logo img {
+  width: 120px;
+  height: 120px;
+  transition: 0.3s ease-in-out all;
+}
+
+.nav-logo :hover {
+  opacity: 80%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5rem;
+}
+
+.nav-item-link:hover .nav-item-icon,
+.nav-item-link:hover .nav-item-title {
+  opacity: 0.8;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-item-icon {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  display: flex;
+  transition: 0.3s ease-in-out all;
+}
+
+.nav-item-icon img {
+  filter: brightness(0) saturate(100%) invert(30%) sepia(72%) saturate(1639%)
+    hue-rotate(336deg) brightness(88%) contrast(100%);
+}
+
+.nav-item-title {
+  color: white;
+  font-size: 20px;
+  font-family: "Shadows Into Light", cursive;
+}
+
+@media screen and (max-width: 616px) {
+  .nav-list {
+    gap: 0;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .nav-item-title {
+    display: none;
+  }
+}
