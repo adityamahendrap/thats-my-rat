@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
   margin: 0;
@@ -17,16 +18,15 @@ ul {
   padding: 0;
 }
 
-/* NAV STYLE */
+/* NAV  */
 
-nav {
+header nav {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  min-height: 8vh;
   gap: 1rem;
   font-family: "Poppins", sans-serif;
   background-color: #d73533;
@@ -34,6 +34,7 @@ nav {
   box-shadow: 0px 126px 96px -69px rgba(0, 0, 0, 0.31) inset;
   -webkit-box-shadow: 0px 126px 96px -69px rgba(0, 0, 0, 0.31) inset;
   -moz-box-shadow: 0px 126px 96px -69px rgba(0, 0, 0, 0.31) inset;
+  z-index: 1000;
 }
 
 .nav-logo {
@@ -100,4 +101,171 @@ nav {
   .nav-item-title {
     display: none;
   }
+}
+
+/* MAIN */
+
+main {
+  padding-top: 214px;
+}
+
+/* CTA SECTION */
+
+.cta-section {
+  position: relative;
+  padding-top: 1.8rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/images/bg-decoration.png");
+  background-size: contain;
+  background-repeat: repeat;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+button.button-3d {
+  touch-action: manipulation;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+button.button-3d {
+  touch-action: manipulation;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #d73634;
+  border: 2px solid #d43f3a;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.button-3d::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #b70200;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #d43f3a, 0 0.625em 0 0 #ff4d4d;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.button-3d:hover {
+  background: #d73634;
+  transform: translate(0, 0.25em);
+}
+
+button.button-3d:hover::before {
+  box-shadow: 0 0 0 2px #d43f3a, 0 0.5em 0 0 #ff4d4d;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.button-3d:active {
+  background: #d73634;
+  transform: translate(0em, 0.75em);
+}
+
+button.button-3d:active::before {
+  box-shadow: 0 0 0 2px #d43f3a, 0 0 #ff4d4d;
+  transform: translate3d(0, 0, -1em);
+}
+
+/* VIDEO SECTION */
+
+.video-section video {
+  width: 100%;
+  display: block;
+}
+
+/* HASTAG SECTION */
+.hastag-section {
+  height: 100px;
+  width: 100%;
+  background-color: #d73634;
+}
+
+.hastag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 12rem;
+  line-height: 55px;
+  letter-spacing: -10px;
+  text-shadow: 5px -5px 0px rgba(255, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1290px) {
+  .hastag {
+    font-size: 9rem;
+    line-height: 90px;
+    letter-spacing: -5px;
+  }
+}
+
+@media screen and (max-width: 982px) {
+  .hastag-section {
+    height: 60px;
+  }
+
+  .hastag {
+    font-size: 6rem;
+    letter-spacing: 0px;
+    line-height: 47px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .hastag-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+
+  .hastag {
+    font-size: 3rem;
+    text-shadow: 5px -5px 0px rgba(255, 255, 255, 0.155);
+  }
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
 }
