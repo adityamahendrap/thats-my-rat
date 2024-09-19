@@ -4,14 +4,13 @@ const navItemIcons = document.querySelectorAll(".nav-item-icon");
 const main = document.querySelector("main");
 
 function applyScrolledStyles() {
-  nav.style.padding = "0 1rem";
+  nav.style.padding = "0.5rem 1rem";
   nav.style.flexDirection = "row";
   navLogo.style.width = "50px";
   navLogo.style.height = "50px";
   navItemIcons.forEach((icon) => {
     icon.style.transform = "scale(0.8)";
   });
-  padding.style.marginTop = "50px";
 }
 
 function applyTopStyles() {
@@ -22,7 +21,6 @@ function applyTopStyles() {
   navItemIcons.forEach((icon) => {
     icon.style.transform = "scale(1)";
   });
-  padding.style.marginTop = "214px";
 }
 
 function scrollToTop() {
@@ -38,4 +36,17 @@ window.addEventListener("scroll", function () {
   } else {
     applyTopStyles();
   }
+});
+
+// select model logic
+const modelListItems = document.querySelectorAll(".model-list li");
+const selectedModel = document.querySelector(".selected-model img");
+modelListItems[0].style.backgroundColor = "#d737349a";
+modelListItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    modelListItems.forEach((li) => (li.style.backgroundColor = ""));
+    this.style.backgroundColor = "#d737349a";
+    const imgSrc = this.querySelector("img").src;
+    selectedModel.src = imgSrc;
+  });
 });
