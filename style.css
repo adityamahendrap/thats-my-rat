@@ -236,7 +236,12 @@ button.button-3d:active::before {
   pointer-events: none; 
 }
 
-/* HASTAG SECTION */
+/* HASTAG */
+
+.about-nav-point {
+  scroll-margin-top: 100px;
+}
+
 .hastag-container {
   height: 100px;
   width: 100%;
