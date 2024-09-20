@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <a href="/" class="nav-logo"
-          ><img src="assets/images/logo.png" alt="Logo" />
-        </a>
+        <div class="nav-logo" onclick="scrollToTop()">
+          <img src="assets/images/logo.png" alt="Logo" />
+        </div>
         <ul class="nav-list">
-          <li class="nav-item">
+          <li class="nav-item nav-home">
             <div class="nav-item-icon">
               <img
                 src="assets/images/nav-home.png"
@@ -23,7 +30,7 @@
             </div>
             <div class="nav-item-title">Home</div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-about">
             <div class="nav-item-icon">
               <img
                 src="assets/images/nav-about.png"
@@ -33,7 +40,7 @@
             </div>
             <div class="nav-item-title">About</div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-music">
             <div class="nav-item-icon">
               <img
                 src="assets/images/nav-music.png"
@@ -49,16 +56,28 @@
 
     <main>
       <div id="content">
+        <audio controls autoplay id="bg-audio" hidden>
+          <source src="assets/audios/bg-audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
         <div class="cta-container">
-          <button class="button-3d">Check Hakos Baelz Channel</button>
+          <a
+            href="https://www.youtube.com/channel/UCgmPnx-EEeOrZSg5Tiw7ZRQ"
+            target="_blank"
+          >
+            <button class="button-3d">Check Hakos Baelz Channel ▶</button>
+          </a>
         </div>
         <figure class="video-container">
-          <video autoplay loop muted>
+          <video autoplay loop muted class="hero-video">
             <source src="assets/videos/hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <button class="audio-toggle">
+            <i class="fa-solid fa-volume-xmark audio-icon"></i>
+          </button>
         </figure>
-        <div class="hastag-container">
+        <div class="hastag-container about-nav-point">
           <div class="hastag">#HAKOSBAELZ</div>
         </div>
         <div class="about-container">
@@ -87,11 +106,27 @@
               to accept the decision, much like her fellow members. That said,
               all of them have no intention of contending; instead to obey.
             </p>
-            <h2>Rat GOD!!</h2>
+            <img
+              src="assets/images/holo-en.png"
+              alt="Hololive EN"
+              width="200"
+            />
           </article>
         </div>
         <div class="music-container">
-          <!-- <h1>MUSIC</h1> -->
+          <div class="music-head">
+            <div class="music-icon">
+              <img
+                src="assets/images/nav-music.png"
+                alt="Home Icon"
+                width="30"
+              />
+            </div>
+            <h2>MUSIC</h2>
+          </div>
+          <div class="slider">
+            <ul class="slider-items"></ul>
+          </div>
         </div>
       </div>
       <img
@@ -101,8 +136,19 @@
       />
     </main>
 
-    <footer></footer>
-
+    <footer>
+      <div>
+        <a href="https://www.youtube.com/channel/UCgmPnx-EEeOrZSg5Tiw7ZRQ">
+          <i class="fa-brands fa-youtube fa-icon"></i>
+        </a>
+        <a href="https://x.com/hakosbaelz">
+          <i class="fa-brands fa-twitter fa-icon"></i>
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>© 2024 Hakos Baelz. Coded by <strong>Aditya Mahendra</strong>.</p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
