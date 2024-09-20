@@ -211,7 +211,6 @@ button.button-3d:active::before {
 
 .video-container {
   position: relative;
-
 }
 
 .video-container video {
@@ -255,6 +254,7 @@ button.button-3d:active::before {
   line-height: 55px;
   letter-spacing: -10px;
   text-shadow: 5px -5px 0px rgba(255, 0, 0, 0.6);
+  position: relative;
 }
 
 @media screen and (max-width: 1290px) {
