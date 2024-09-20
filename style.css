@@ -229,7 +229,7 @@ button.button-3d:active::before {
   cursor: pointer;
   font-size: 20px;
   border-radius: 50%;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .audio-toggle i {
